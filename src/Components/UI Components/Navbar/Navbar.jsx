@@ -9,9 +9,7 @@ function Navbar() {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/pokemon">Pokemons</Link>
-        </li>
+        <li>Pokemons</li>
         <li>Trainers</li>
         <li>Regions</li>
         <li>About</li>
