@@ -1,0 +1,29 @@
+:root {
+    /* Colors */
+    --clr-primary-900: #000814;
+    --clr-primary-600: #001D3D;
+    --clr-primary-300: #003566;
+    --clr-secondary-600: #FFC300;
+    --clr-secondary-400: #FFD60A;
+    --clr-neutral-100: #FFF;
+
+    /* Font Families */
+    --ff-primary-400: 'Poppins', sans-serif;
+    --ff-primary-900: 'Kanit', sans-serif;
+    --ff-secondary-400: 'Cormorant Garamond', serif;
+
+    /* Font Sizes */
+    --fs-100: 0.5em;
+    --fs-300: 1em;
+    --fs-400: 1.25em;
+    --fs-500: 1.5em;
+    --fs-600: 2em;
+    --fs-700: 3em;
+    --fs-900: 5em;
+
+    /* Box Shadows */
+}
+
+body {
+    min-height: 100vh;
+}

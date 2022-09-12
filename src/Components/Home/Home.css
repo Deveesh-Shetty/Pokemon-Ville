@@ -1,0 +1,16 @@
+#home {
+    min-height: 100vh;
+    width: 100vw;
+}
+video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: contrast(200%);
+}
+header.hero img{
+    width: 50%;
+    display: block;
+    margin: auto;
+}

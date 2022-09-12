@@ -1,0 +1,23 @@
+nav > ul {
+    display: flex;
+    list-style: none;
+    color: var(--clr-secondary-400);
+    font-size: var(--fs-500);
+    gap: 2%;
+    padding-block: 1%;
+}
+nav > ul > li {
+    padding: 1% 2%;
+}
+nav > ul > li:last-child {
+    margin-left: auto;
+}
+nav > ul > li:hover,
+nav > ul > li > *:hover {
+    color: var(--clr-neutral-100);
+    cursor: pointer;
+}
+nav > ul > li > * {
+    text-decoration: none;
+    color: var(--clr-secondary-400);
+}
