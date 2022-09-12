@@ -1,8 +1,8 @@
 import React from "react";
-import Background from "../Components/Home/Components/Background";
+import Background from "../Components/UI Components/Background/Background";
 import MainHeader from "../Components/Home/Components/MainHeader";
-import "../Components/Home/Home.css";
 import Navbar from "../Components/UI Components/Navbar/Navbar";
+import "../Components/Home/Home.css";
 
 function HomePage() {
   return (
