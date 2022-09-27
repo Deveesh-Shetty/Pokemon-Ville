@@ -21,3 +21,32 @@ nav > ul > li > * {
     text-decoration: none;
     color: var(--clr-secondary-400);
 }
+nav > li:has(.toggle-btn) {
+    display: none;
+}
+.toggle-btn {
+    transition: transform 250ms ease-in-out;
+}
+
+@media (max-width: 50em) {
+    nav { 
+        display: flex;
+    }
+    nav > li:has(.toggle-btn) {
+        display: block;
+        right: 0.5em;
+        margin-top: 1em;
+        position: absolute;
+    }
+    nav > ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-block: 5%;
+        background-color: var(--clr-primary-800);
+    }
+    nav > ul > li:last-child {
+        margin-left: 0;
+    }
+}

@@ -10,7 +10,14 @@ video {
     filter: contrast(200%);
 }
 header.hero img{
-    width: 50%;
+    width: 40%;
     display: block;
     margin: auto;
+    user-select: none;
+}
+
+@media (max-width: 50em) {
+    header.hero img {
+        margin-top: 2em;
+    }
 }
