@@ -1,11 +1,10 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function useFetch(url) {
-  const [data, setData] = useState();
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState();
+  const [error, setError] = useState(null);
 
   let source = axios.CancelToken.source();
   useEffect(() => {
@@ -15,15 +14,21 @@ function useFetch(url) {
       })
       .then((response) => {
         setData(response.data);
-        setLoading(false);
       })
-      .catch((err) => setError(err));
+      .catch((err) => setError(err))
+      .finally(() => {
+        // setTimeout(() => {
+        setLoading(false);
+        // }, 1500); // To have loading animation
+        // Adding it later
+      });
 
     return () => {
       // Cancelling extra unneccesary api calls
-      source.cancel;
+      // source.cancel();
+      // For some reason cancelling everything
     };
-  }, []);
+  }, [url]);
 
   return { data, loading, error };
 }

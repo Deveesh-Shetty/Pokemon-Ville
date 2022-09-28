@@ -27,4 +27,9 @@
 
 body {
     min-height: 100vh;
+    color: var(--clr-neutral-100);
+}
+.loader {
+    font-size: var(--fs-900);
+    color: var(--clr-neutral-900)
 }

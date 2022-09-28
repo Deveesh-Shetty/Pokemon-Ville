@@ -22,7 +22,9 @@ function Navbar() {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>Pokemons</li>
+        <li>
+          <Link to="/pokemons">Pokemons</Link>
+        </li>
         <li>Trainers</li>
         <li>Regions</li>
         <li>About</li>
