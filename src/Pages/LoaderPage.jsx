@@ -1,17 +1,12 @@
 import React from "react";
 import "../Components/Loader/Loader.css";
-import Background from "../Components/UI Components/Background/Background";
+import LoaderImage from "../Assets/Pokeball.png";
 
 function LoaderPage() {
   return (
     <div id="loader">
-      <Background />
       <div>
-        <img
-          src="Assets/Pokeball.png"
-          alt="Loader"
-          className="loader-pokeball"
-        />
+        <img src={LoaderImage} alt="Loader" className="loader-pokeball" />
       </div>
     </div>
   );

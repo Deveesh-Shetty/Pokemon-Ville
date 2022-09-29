@@ -11,7 +11,6 @@ function Pokemons() {
   const { data, error, loading } = useFetch(URL);
   if (loading) {
     return <LoaderPage />;
-    // Change this later
   }
   if (error) {
     console.log(error);

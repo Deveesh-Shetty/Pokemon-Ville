@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../Hooks/useFetch";
 import LoaderPage from "../../Pages/LoaderPage";
@@ -12,7 +11,7 @@ function Pokemon(props) {
     console.log(error);
   }
   if (loading) {
-    return;
+    return <LoaderPage />;
   }
 
   function openPokemon() {
@@ -25,7 +24,10 @@ function Pokemon(props) {
 
   return (
     <div className="pokemon" onClick={openPokemon}>
-      <img src={data.sprites.front_default} alt={data.name} />
+      <img
+        src={data.sprites.other["official-artwork"].front_default}
+        alt={data.name}
+      />
       <div>
         <h1 className="pokemon-name">{props.pokemonList.name}</h1>
         {/* <img src={data.sprites.back_default} alt={data.name} /> */}

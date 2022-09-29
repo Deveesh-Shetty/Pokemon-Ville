@@ -17,9 +17,7 @@ function useFetch(url) {
       })
       .catch((err) => setError(err))
       .finally(() => {
-        // setTimeout(() => {
         setLoading(false);
-        // }, 1000); // To have loading animation
         // Adding it later
       });
 

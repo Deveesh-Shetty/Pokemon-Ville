@@ -1,5 +1,6 @@
 #loader {
     min-height: 100vh;
+    background: url("Assets/SpaceBG.png");
     display: flex;
     justify-content: center;
     align-items: center;
