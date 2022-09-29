@@ -19,7 +19,7 @@ function useFetch(url) {
       .finally(() => {
         // setTimeout(() => {
         setLoading(false);
-        // }, 1500); // To have loading animation
+        // }, 1000); // To have loading animation
         // Adding it later
       });
 

@@ -3,15 +3,14 @@ import { useState } from "react";
 import useFetch from "../../Hooks/useFetch";
 import Pokemon from "./Pokemon";
 import PrimaryBtn from "../UI Components/Buttons/Primary Button/PrimaryBtn";
+import LoaderPage from "../../Pages/LoaderPage";
 import "./Pokemons.css";
 
 function Pokemons() {
   const [URL, setURL] = useState("https://pokeapi.co/api/v2/pokemon?");
   const { data, error, loading } = useFetch(URL);
   if (loading) {
-    return (
-      <h1 className="loader">Summoning Pokemon...from the Pokemon Realm</h1>
-    );
+    return <LoaderPage />;
     // Change this later
   }
   if (error) {

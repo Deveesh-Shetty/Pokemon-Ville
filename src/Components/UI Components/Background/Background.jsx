@@ -1,6 +1,6 @@
 import React from "react";
-import BackgroundVideo from "../../../../public/Background/space_plain.mp4";
-// If I didnt import the video was not playing in some pages
+import BackgroundVideo from "../../../Assets/Background/space_plain.mp4";
+// If I didnt import the video was not playing in some pages so changed from public to src
 
 function Background() {
   return (

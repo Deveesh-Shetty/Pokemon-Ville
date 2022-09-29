@@ -1,16 +1,18 @@
 import React from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../Hooks/useFetch";
+import LoaderPage from "../../Pages/LoaderPage";
 
 function Pokemon(props) {
   const navigate = useNavigate();
 
   const { data, loading, error } = useFetch(props.pokemonList.url);
-  if (loading) {
-    return;
-  }
   if (error) {
     console.log(error);
+  }
+  if (loading) {
+    return;
   }
 
   function openPokemon() {
