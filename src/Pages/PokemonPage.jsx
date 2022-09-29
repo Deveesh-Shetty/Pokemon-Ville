@@ -1,14 +1,16 @@
 import React from "react";
-import Pokemons from "../Components/Pokemons/Pokemons";
+import { useLocation } from "react-router-dom";
+import IndivPokemon from "../Components/Pokemon/IndivPokemon";
 import Background from "../Components/UI Components/Background/Background";
-import Navbar from "../Components/UI Components/Navbar/Navbar";
 
 function PokemonPage() {
+  const location = useLocation();
+  const { pokemonData } = location.state;
+
   return (
-    <main id="pokemon-page">
+    <main id="individual-pokemon">
       <Background />
-      <Navbar />
-      <Pokemons />
+      <IndivPokemon data={pokemonData} />
     </main>
   );
 }

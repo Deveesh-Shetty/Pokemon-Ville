@@ -8,6 +8,11 @@
     --clr-secondary-400: #FFD60A;
     --clr-neutral-100: #FFF;
 
+    /* Gradients */
+    --bg-gradient: linear-gradient(45deg, #5533ff80, #20bdff80, #a5fecb80);
+    --bg-webkit-gradient: -webkit-linear-gradient(45deg , #5433ff80, #20bdff80, #a5fecb80);
+    --yellow-gradient: linear-gradient(-45deg, #FCD93D80, #E8C933); 
+
     /* Font Families */
     --ff-primary-400: 'Poppins', sans-serif;
     --ff-primary-900: 'Kanit', sans-serif;
@@ -23,6 +28,11 @@
     --fs-900: 5em;
 
     /* Box Shadows */
+    --bs-glass-effect: inset 0.25em 0.25em 2em #5533ff,
+    0.25em 0.25em 1em #20bdff;
+
+    /* Filters */
+    --glass-filter: blur(2px) saturate(180%);
 }
 
 body {

@@ -1,0 +1,10 @@
+.primary-btn {
+    all: unset;
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+    background: var(--bg-gradient);
+    border-radius: 100vw;
+    background:var(--yellow-gradient);
+    color: black;
+}
