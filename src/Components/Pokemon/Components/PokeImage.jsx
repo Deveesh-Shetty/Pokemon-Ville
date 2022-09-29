@@ -1,16 +1,21 @@
 import React from "react";
-import styles from "../Pokemon.module.css";
+import styles from "../Pokemon.css";
 
-function PokeImage({ images, name }) {
-  console.log(images);
+function PokeImage({ image, name, otherImages }) {
   return (
-    <div className="pokemon-image">
+    <>
       <img
-        src={images.front_default}
+        src={image.front_default}
         alt={name}
         className={styles["pokemon-image"]}
       />
-    </div>
+      <div>
+        <img src={otherImages.front_default} alt={`Front ${name}`} />
+        <img src={otherImages.back_default} alt={`Back ${name}`} />
+        <img src={otherImages.front_shiny} alt={`Front Shiny ${name}`} />
+        <img src={otherImages.back_shiny} alt={`Back Shiny ${name}`} />
+      </div>
+    </>
   );
 }
 

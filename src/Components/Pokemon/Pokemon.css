@@ -1,0 +1,15 @@
+#individual-pokemon {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+.pokemon-image {
+    width: 25%;
+}
+.individual-pokemon {
+    place-self: center;
+}
+.pokemon-description > h1 {
+    text-align: center;
+    margin-block: 0.5em;
+}

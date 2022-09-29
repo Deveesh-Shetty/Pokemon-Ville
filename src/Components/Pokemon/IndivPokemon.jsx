@@ -1,17 +1,18 @@
 import React from "react";
+import PokeDesc from "./Components/PokeDesc";
 import PokeImage from "./Components/PokeImage";
 
 function IndivPokemon({ data }) {
-  console.log(data.sprites);
   return (
     <>
       <div className="individual-pokemon">
-        <h1 className="pokemon-name">{data.name}</h1>
         <PokeImage
-          images={data.sprites.other["official-artwork"]}
+          image={data.sprites.other["official-artwork"]}
           name={data.name}
+          otherImages={data.sprites}
         />
       </div>
+      <PokeDesc pokemon={data} />
     </>
   );
 }
