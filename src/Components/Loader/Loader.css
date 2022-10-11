@@ -2,6 +2,8 @@
     min-height: 100vh;
     background: url("Assets/SpaceBG.png");
     display: flex;
+    position: absolute;
+    inset: 0;
     justify-content: center;
     align-items: center;
 }

@@ -1,7 +1,7 @@
 .primary-btn {
     all: unset;
     padding: 0.5em 1em;
-    width: 8em;
+    width: min(40%, 8em);
     text-align: center;
     background: var(--bg-gradient);
     border-radius: 100vw;

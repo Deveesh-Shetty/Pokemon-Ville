@@ -1,12 +1,13 @@
 .pokemon-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
     gap: 2em;
     padding: 2em 1em;
 }
 
 .pokemon {
     display: flex;
+    position: relative;
     align-items: center;
     padding: 1em;
     border-radius: 1em;
@@ -42,5 +43,6 @@
 
     .pokemon-list {
         margin-top: 2rem;
+        font-size: var(--fs-200);
     }
 }

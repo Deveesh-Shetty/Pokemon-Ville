@@ -1,10 +1,12 @@
 #individual-pokemon {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 100%));
 }
 .pokemon-image {
-    width: 25%;
+    width: min(25em, 100%);
+    display: block;
+    margin: auto;
 }
 .individual-pokemon {
     place-self: center;
@@ -12,4 +14,8 @@
 .pokemon-description > h1 {
     text-align: center;
     margin-block: 0.5em;
+}
+.image-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
 }
