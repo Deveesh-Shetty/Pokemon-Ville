@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
     gap: 2em;
-    padding: 2em 1em;
+    padding: 2em 2em;
 }
 
 .pokemon {
@@ -25,6 +25,9 @@
 }
 .pokemon-name::first-letter {
     text-transform: capitalize;
+}
+.pokemon-name {
+    font-size: 1.75rem;
 }
 .pokemon .types {
     display: flex;
