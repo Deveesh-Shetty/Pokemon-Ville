@@ -18,7 +18,7 @@ function PokeDesc({ pokemon }) {
           <h2>Stats</h2>
           <div>
             {pokemon.stats.map((stat, index) => (
-              <div key={index}>
+              <div key={index} className="inner-stats">
                 <p>{stat.stat.name}</p>
                 <p>{stat.base_stat}</p>
               </div>
@@ -43,10 +43,11 @@ function PokeDesc({ pokemon }) {
         <div className="moves">
           <h2>Moves</h2>
           <div>
-            {pokemon.moves.map((move, index) => (
-              <p key={index}>{index % 10 === 0 ? move.move.name : ""}</p>
+            {pokemon.moves.map(
+              (move, index) =>
+                index % 10 === 0 ? <p key={index}>{move.move.name}</p> : ""
               //   Getting only few moves since there are many
-            ))}
+            )}
           </div>
         </div>
       </div>

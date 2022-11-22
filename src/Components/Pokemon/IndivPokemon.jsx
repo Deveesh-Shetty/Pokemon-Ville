@@ -1,6 +1,6 @@
-import React from "react";
-import PokeDesc from "./Components/PokeDesc";
-import PokeImage from "./Components/PokeImage";
+import React from "react"
+import PokeDesc from "./Components/PokeDesc"
+import PokeImage from "./Components/PokeImage"
 
 function IndivPokemon({ data }) {
   return (
@@ -14,7 +14,7 @@ function IndivPokemon({ data }) {
       </div>
       <PokeDesc pokemon={data} />
     </>
-  );
+  )
 }
 
-export default IndivPokemon;
+export default IndivPokemon

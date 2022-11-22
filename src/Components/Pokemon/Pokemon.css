@@ -4,12 +4,12 @@
     grid-template-columns: 1fr 1fr;
     /* grid-template-columns: repeat(auto-fit, minmax(20em, 100%)); */
 }
-.pokemon-image {
+.active-image > img {
     width: min(25em, 100%);
     display: block;
     margin: auto;
 }
-.pokemon-description > .pokemon-name {
+.pokemon-name {
     padding-block: 1rem;
 }
 .pokemon-description-wrapper {
@@ -21,19 +21,49 @@
 .pokemon-description-wrapper > div {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     gap: 0.5rem;
     background: var(--bg-gradient);
     border-radius: 1rem;
     box-shadow: var(--bs-glass-effect);
 }
 .pokemon-description-wrapper > div > div {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    /* place-items: center; */
+    text-align: center;
     gap: 0.25rem;
 }
+
+.pokemon-description-wrapper > div > h2 {
+    text-align: center;
+}
+.pokemon-description-wrapper > div > div:has(> div) {
+    grid-template-columns: repeat(6, 1fr);
+}
+.inner-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pokemon-description-wrapper > div > div p {
+    /* outline: 1px solid red; */
+    text-transform: capitalize;
+    padding: 0.5rem;
+}
 .image-set {
+    display: flex;
     margin: auto;
+    gap: 2rem;
+    overflow: hidden;
+}
+.image-set > img {
+    width: 5rem;
+    aspect-ratio: 1;
+}
+.image-set > img:not(:first-child) {
+    scale: 2;
 }
 .individual-pokemon {
     margin: auto;
@@ -41,6 +71,7 @@
 .pokemon-description > h1 {
     text-align: center;
     margin-block: 0.5em;
+    padding-inline: 1rem 4rem;
 }
 .image-container {
     display: grid;
@@ -50,7 +81,20 @@
     #individual-pokemon {
         grid-template-columns: repeat(auto-fit, minmax(20em, 100%));
     }
-    .image-container {
-        grid-template-columns: 70% 30%;
+    .image-set {
+        flex-wrap: wrap;
+        padding: 0.5rem;
+    }
+    .pokemon-description-wrapper {
+        padding-inline: 1rem;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    .pokemon-description-wrapper > div > div:has(> div) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .pokemon-description > h1 {
+        padding-inline: 1rem;
     }
 }

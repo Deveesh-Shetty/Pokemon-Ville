@@ -3,15 +3,42 @@ import { useState } from "react"
 import "../Pokemon.css"
 
 function PokeImage({ image, name, otherImages }) {
-  const [active, setActive] = useState(null)
+  const [activeImage, setActiveImage] = useState(image.front_default)
+  const changeImage = (event) => {
+    let src = event.target.src
+    setActiveImage(src)
+  }
   return (
     <div className="image-container">
-      <img src={image.front_default} alt={name} className="pokemon-image" />
+      <div className="active-image">
+        <img src={activeImage} alt={name} className="pokemon-image" />
+      </div>
       <div className="image-set">
-        <img src={otherImages.front_default} alt={`Front ${name}`} />
-        <img src={otherImages.back_default} alt={`Back ${name}`} />
-        <img src={otherImages.front_shiny} alt={`Front Shiny ${name}`} />
-        <img src={otherImages.back_shiny} alt={`Back Shiny ${name}`} />
+        <img
+          src={image.front_default}
+          alt={`Front ${name}`}
+          onClick={changeImage}
+        />
+        <img
+          src={otherImages.front_default}
+          alt={`Front ${name}`}
+          onClick={changeImage}
+        />
+        <img
+          src={otherImages.back_default}
+          alt={`Back ${name}`}
+          onClick={changeImage}
+        />
+        <img
+          src={otherImages.front_shiny}
+          alt={`Front Shiny ${name}`}
+          onClick={changeImage}
+        />
+        <img
+          src={otherImages.back_shiny}
+          alt={`Back Shiny ${name}`}
+          onClick={changeImage}
+        />
       </div>
     </div>
   )
